@@ -1,0 +1,25 @@
+{
+    "name": "laragento/cms",
+    "description": "",
+    "authors": [
+        {
+            "name": "vonbyte",
+            "email": "info@tazign.ch"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laragento\\Cms\\Providers\\CmsServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "\\Laragento\\Cms\\": "./"
+        }
+    }
+}

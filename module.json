@@ -1,0 +1,16 @@
+{
+    "name": "Cms",
+    "alias": "cms",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Cms\\Providers\\CmsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}

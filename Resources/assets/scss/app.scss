@@ -1,0 +1,35 @@
+.text-line-element {
+
+}
+
+.text-field-element {
+
+}
+
+.formatted-text-field-element {
+
+}
+
+.blog-post {
+    padding : 2rem;
+    margin : 1rem;
+    background : #ccc;
+    line-height : 1.2;
+
+    .text-line-element {
+        font-size : 1.6rem;
+        font-weight : bold;
+        margin-bottom : 1.5rem;
+    }
+
+    .text-field-element {
+        font-size : 1.2rem;
+        line-height : 1.4;
+        font-style: italic;
+        margin-bottom : 2.5rem;
+    }
+
+    .formatted-text-field-element {
+
+    }
+}
