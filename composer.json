@@ -7,6 +7,9 @@
             "email": "info@tazign.ch"
         }
     ],
+    "require": {
+        "laragento/laragento": "dev-dev"
+    },
     "extra": {
         "laravel": {
             "providers": [
