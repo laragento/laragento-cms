@@ -3,16 +3,16 @@
 @section('meta')
     <meta property="og:url" content="{{ url()->current() }}"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="{{trans('cms::cms.edit_blocktype')}}"/>
-    <title>{{trans('cms::cms.edit_blocktype')}}</title>
+    <meta property="og:title" content="{{trans('cms::cms.blocktype.edit')}}"/>
+    <title>{{trans('cms::cms.blocktype.edit')}}</title>
 @endsection
 
 @section('content')
-    @component('cms::blocktype.component_blocktype_form', ['blocktype' => $blocktype])
+    @component('cms::cms.blocktype.component_blocktype_form', ['blocktype' => $blocktype])
         @slot('method')POST @endslot
         @slot('action'){{route('cms.blocktype.update', ['blockType' => $blocktype->id])}}@endslot
-        @slot('title'){{trans('cms::cms.edit_blocktype')}}@endslot
-        @slot('buttonTitle'){{trans('cms::admin.edit')}}@endslot
+        @slot('title'){{trans('cms::cms.blocktype.edit')}}@endslot
+        @slot('buttonTitle'){{trans('admin::admin.update')}}@endslot
         @slot('additionalTopFields')
             @method('PATCH')
         @endslot
@@ -57,7 +57,7 @@
                                   method="post">
                                 @csrf
                                 @method('patch')
-                                <label>{{ trans('cms::blocktype.elementtitle') }}
+                                <label>{{ trans('cms::cms.blocktype.elementtitle') }}
                                     <input type="text" name="title" required autofocus placeholder=""
                                            value="{{ old('title') ? old('title') : !empty($element) ? $element->title : '' }}">
                                     @if ($errors->has('title'))
@@ -65,7 +65,7 @@
                                     @endif
                                 </label>
 
-                                <label>{{ trans('cms::blocktype.blocktypeposition') }}
+                                <label>{{ trans('cms::cms.position') }}
                                     <input type="number" min="0" name="sort_nr" required autofocus placeholder=""
                                            value="{{ old('sort_nr') ? old('sort_nr') : !empty($element) ? $element->sort_nr : '' }}">
                                     @if ($errors->has('sort_nr'))

@@ -5,7 +5,7 @@
         @csrf
         {{ $additionalTopFields }}
         <div class="form-row">
-            <label>{{ trans('cms::blocktype.blocktypetitle') }}
+            <label>{{ trans('cms::cms.blocktype.title') }}
                 <input type="text" name="title" required autofocus placeholder=""
                        value="{{ old('title') ? old('title') : !empty($blocktype) ? $blocktype->title : '' }}">
                 @if ($errors->has('title'))

@@ -3,8 +3,8 @@
 @section('meta')
     <meta property="og:url" content="{{ url()->current() }}"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="{{trans('cms::cms.new_page')}}"/>
-    <title>{{trans('cms::cms.new_page')}}</title>
+    <meta property="og:title" content="{{trans('cms::cms.page.new')}}"/>
+    <title>{{trans('cms::cms.page.new')}}</title>
 @endsection
 
 @section('content')
@@ -13,8 +13,8 @@
             POST
         @endslot
         @slot('action'){{route('cms.page.store')}}@endslot
-        @slot('title'){{trans('cms::cms.new_page')}}@endslot
-        @slot('buttonTitle'){{trans('cms::admin.add')}}@endslot
+        @slot('title'){{trans('cms::cms.page.new')}}@endslot
+        @slot('buttonTitle'){{trans('admin::admin.add')}}@endslot
         @slot('additionalTopFields')@endslot
         @slot('additionalMiddleFields')@endslot
         @slot('additionalBottomFields')@endslot

@@ -1,7 +1,7 @@
 <h2>{{ $element->title }}</h2>
 
 <div>
-    <label>{{ trans('cms::element.link_url') }}
+    <label>{{ trans('cms::element_link.url') }}
         <?php $contentField = $element->fieldByTitle('link_url');
         $fieldValue = !empty($block) ? $element->valueByField($contentField, $block)->value : null;
         ?>
@@ -13,7 +13,7 @@
     </label>
 </div>
 <div>
-    <label>{{ trans('cms::element.link_title') }}
+    <label>{{ trans('cms::element_link.title') }}
         <?php $contentField = $element->fieldByTitle('link_title');
         $fieldValue = !empty($block) ? $element->valueByField($contentField, $block)->value : null;
         ?>
@@ -25,7 +25,7 @@
     </label>
 </div>
 <div>
-    <label>{{ trans('cms::element.link_open_blank') }}
+    <label>{{ trans('cms::element_link.open_blank') }}
         <?php $contentField = $element->fieldByTitle('open_blank');
         $fieldValue = !empty($block) ? $element->valueByField($contentField, $block)->value : null;
         ?>

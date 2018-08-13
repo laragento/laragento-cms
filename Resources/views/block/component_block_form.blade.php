@@ -4,7 +4,7 @@
     </div>
     @csrf
     {{ $additionalTopFields }}
-    <label>{{ trans('cms::block.title') }}
+    <label>{{ trans('cms::cms.block.title') }}
         <input type="text" name="meta[title]" autofocus placeholder=""
                value="{{ old('meta[title]') ? old('meta[title]') : !empty($block) ? $block->title : '' }}">
         @if ($errors->has('meta[title]'))

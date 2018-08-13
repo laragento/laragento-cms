@@ -13,8 +13,8 @@
             POST
         @endslot
         @slot('action'){{route('cms.page.update', ['page' => $page->id])}}@endslot
-        @slot('title'){{trans('cms::cms.edit_page')}}@endslot
-        @slot('buttonTitle'){{trans('cms::admin.edit')}}@endslot
+        @slot('title'){{trans('cms::cms.page.edit')}}@endslot
+        @slot('buttonTitle'){{trans('admin::admin.edit')}}@endslot
         @slot('additionalTopFields')
             @method('PATCH')
         @endslot
