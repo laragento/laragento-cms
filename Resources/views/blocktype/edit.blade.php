@@ -8,7 +8,7 @@
 @endsection
 
 @section('content')
-    @component('cms::cms.blocktype.component_blocktype_form', ['blocktype' => $blocktype])
+    @component('cms::blocktype.component_blocktype_form', ['blocktype' => $blocktype])
         @slot('method')POST @endslot
         @slot('action'){{route('cms.blocktype.update', ['blockType' => $blocktype->id])}}@endslot
         @slot('title'){{trans('cms::cms.blocktype.edit')}}@endslot
