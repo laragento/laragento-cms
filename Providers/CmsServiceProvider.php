@@ -33,7 +33,7 @@ class CmsServiceProvider extends ServiceProvider
         $this->publishAssets();
         $this->registerFactories();
         $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
-        $this->loadRoutesFrom(__DIR__ . '/../Http/routes');
+        $this->loadRoutesFrom(__DIR__ . '/../Http/routes.php');
     }
 
     /**

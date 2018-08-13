@@ -5,7 +5,7 @@ namespace Laragento\Cms\Http\Controllers;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
-use Modules\LaragentoAdmin\Helpers\AuthHelper;
+use Laragento\Admin\Helpers\AuthHelper;
 use Laragento\Cms\Models\BlockType;
 use Laragento\Cms\Models\Page;
 use Laragento\Cms\Repositories\BlockRepository;
