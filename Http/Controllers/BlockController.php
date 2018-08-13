@@ -10,6 +10,7 @@ use Laragento\Cms\Models\BlockType;
 use Laragento\Cms\Models\Page;
 use Laragento\Cms\Repositories\BlockRepositoryInterface;
 use Laragento\Cms\Repositories\PageRepositoryInterface;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class BlockController extends Controller
 {
@@ -99,10 +100,6 @@ class BlockController extends Controller
         } else {
             $data = $this->retrieveData();
             $block = $this->blockRepository->store($data['data']);
-            if ($block && $data['files'] && count($data['files']) > 0) {
-                $files = $this->handleUploadedFiles($block, $data['files']);
-                $block->files()->saveMany($files);
-            }
 
             if (request()->expectsJson()) {
                 return response()->json($block, 201);
@@ -190,8 +187,6 @@ class BlockController extends Controller
         $data = [];
         $data['data'] = request()->all();
         $data['data']['meta']['page_id'] = request()->route('page')->id;
-        $data['files'] = request()->file();
-
         return $data;
     }
 
@@ -207,23 +202,7 @@ class BlockController extends Controller
         return $validator;
     }
 
-    protected function handleUploadedFiles($block, $files)
-    {
-        $type = ElementType::whereTitle('file')->first();
-        $fileData = [
-            'store_id' => 1,
-            'block_id' => $block->id,
-            'type_id' => $type->id,
-            'name' => 'todo'
-        ];
-        $path = $this->fileHelper->preparePath('block/' . $block->type->title);
-        foreach ($files as $file) {
-            $this->fileHelper->storeUploadedFile($file, $path);
-            $fileData['value'] = substr($path, -33) . '/' . $file->getClientOriginalName();
-            $fileEntities[] = ElementFile::create($fileData);
-        }
-        return $fileEntities;
-    }
+
 
     /**
      * @param $validator

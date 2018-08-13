@@ -1,4 +1,4 @@
-<form novalidate class="blocktype-form" method="{{$method}}" action="{{$action}}">
+<form novalidate class="blocktype-form" enctype="multipart/form-data" method="{{$method}}" action="{{$action}}">
     <div class="form-title">
         <h1>{{ $title }}</h1>
     </div>

@@ -37,6 +37,5 @@ class UpdateElementTableSeeder extends Seeder
                 ]);
             }
         }*/
-
     }
 }

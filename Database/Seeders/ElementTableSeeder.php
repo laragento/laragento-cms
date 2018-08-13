@@ -19,6 +19,7 @@ class ElementTableSeeder extends Seeder
     {
         $types = [
             'TextLineElement' => ['content'],
+            'HeadingElement' => ['content','format'],
             'LinkElement' => ['link_url', 'link_title', 'open_blank'],
             'TextFieldElement' => ['content'],
             'FormattedTextFieldElement' => ['content'],
