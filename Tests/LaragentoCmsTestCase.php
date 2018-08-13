@@ -4,8 +4,8 @@
 namespace Laragento\Cms\Tests;
 
 use Illuminate\Foundation\Testing\WithFaker;
-use Modules\LaragentoAdmin\Models\AdminUser;
-use Modules\LaragentoAdmin\Repositories\AdminUserRepository;
+use Laragento\Admin\Models\AdminUser;
+use Laragento\Admin\Repositories\AdminUserRepository;
 use Tests\TestCase;
 
 class CmsTestCase extends TestCase
