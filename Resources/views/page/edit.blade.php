@@ -1,4 +1,4 @@
-@extends('laragentoadmin::layouts.master')
+@extends('admin::layouts.master')
 
 @section('meta')
     <meta property="og:url" content="{{ url()->current() }}"/>
@@ -59,13 +59,13 @@
                         </div>
 
                         <div data-content="" class="table-cell">
-                            <a href="{{route('cms.block.update',['page' => $page->id, 'block' => $block->id])}}">{{trans('laragentoadmin::admin.edit')}}</a>
+                            <a href="{{route('cms.block.update',['page' => $page->id, 'block' => $block->id])}}">{{trans('admin::admin.edit')}}</a>
                             <form id="block-{{$block->id}}-delete-form"
                                   action="{{route('cms.block.destroy',['page' => $page->id,'block' => $block->id])}}"
                                   method="post">
                                 @csrf
                                 @method('delete')
-                                <button class="pseudo-link">{{trans('laragentoadmin::admin.delete')}}</button>
+                                <button class="pseudo-link">{{trans('admin::admin.delete')}}</button>
                             </form>
                         </div>
                     </div>

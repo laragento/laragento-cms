@@ -1,4 +1,4 @@
-@extends('laragentoadmin::layouts.master')
+@extends('admin::layouts.master')
 
 @section('content')
     <h1>Typenübersicht</h1>

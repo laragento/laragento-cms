@@ -1,4 +1,4 @@
-@extends('laragentoadmin::layouts.master')
+@extends('admin::layouts.master')
 
 @section('meta')
     <meta property="og:url" content="{{ url()->current() }}"/>
