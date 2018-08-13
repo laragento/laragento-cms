@@ -15,6 +15,6 @@
             @slot('additionalScripts')@endslot
         @endcomponent
     @else
-        <p>{{trans('cms::cms.pages.no_pages')}}</p>
+        <p>{{trans('cms::cms.page.no_pages')}}</p>
     @endif
 @endsection
