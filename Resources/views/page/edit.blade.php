@@ -72,7 +72,7 @@
                 @endforeach
             </div>
         @else
-            <p>Keine Elemente vorhanden</p>
+            <p>{{trans('cms::cms.element.no_elements')}}</p>
         @endif
     </div>
 @endsection

@@ -3,7 +3,7 @@
         @foreach($tableheader as $header)
         <div class="table-cell">{{$header}}</div>
         @endforeach
-        <div class="table-cell">Aktionen</div>
+        <div class="table-cell">{{trans('admin::admin.actions')}}</div>
     </div>
 
     @foreach($entities as $entity)
@@ -13,12 +13,12 @@
             <div data-content="{{$header}}" class="table-cell">{{ eval('echo '.$properties[$loop->index].";") }}</div>
             @endforeach
             <div data-content="Aktionen" class="table-cell">
-                <a href="{{route($editRoute['url'],[$editRoute['param'] => $entity->id])}}">Bearbeiten</a><br/>
+                <a href="{{route($editRoute['url'],[$editRoute['param'] => $entity->id])}}">{{trans('admin::admin.update')}}</a><br/>
                 <form style="display:none" id="{{$slug}}-{{$entity->id}}-delete-form" action="{{route($deleteRoute['url'],[$deleteRoute['param'] => $entity->id])}}" method="post">
                     @csrf
                     @method('delete')
                 </form>
-                <span onclick="submitDeleteForm({{$entity->id}})" class="pseudo-link">Löschen</span>
+                <span onclick="submitDeleteForm({{$entity->id}})" class="pseudo-link">{{trans('admin::admin.remove')}}</span>
                 {{$additionalActions}}
             </div>
         </div>

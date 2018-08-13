@@ -15,6 +15,6 @@
             @slot('additionalScripts')@endslot
         @endcomponent
     @else
-        <p>Es wurden noch keine statischen Seiten erfasst.</p>
+        <p>{{trans('cms::cms.pages.no_pages')}}</p>
     @endif
 @endsection

@@ -94,7 +94,7 @@ class CmsServiceProvider extends ServiceProvider
         if (is_dir($langPath)) {
             $this->loadTranslationsFrom($langPath, 'cms');
         } else {
-            $this->loadTranslationsFrom(__DIR__ .'/../Resources/lang', 'cms');
+            $this->loadTranslationsFrom(__DIR__ .'/../Resources/lang/','cms');
         }
     }
 

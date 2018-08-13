@@ -1,7 +1,7 @@
 @extends('admin::layouts.master')
 
 @section('content')
-    <h1>Typenübersicht</h1>
+    <h1>{{trans('cms::cms.blocktype.overview')}}</h1>
     @if($blocktypes and count($blocktypes) > 0)
         @component('cms::components.overview_table',
             ['entities' => $blocktypes,
@@ -15,6 +15,6 @@
             @slot('additionalScripts')@endslot
         @endcomponent
     @else
-        <p>Es wurden noch keine Blocktypen erfasst.</p>
+        <p>{{trans('cms::cms.blocktype.no_blocktypes')}}</p>
     @endif
 @endsection

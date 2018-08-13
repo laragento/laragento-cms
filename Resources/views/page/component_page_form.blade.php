@@ -5,7 +5,7 @@
     @csrf
     {{ $additionalTopFields }}
     <div class="form-row">
-        <label>{{ trans('cms::page.pagetitle') }}
+        <label>{{ trans('cms::cms.page.title') }}
             <input type="text" name="title" required autofocus placeholder=""
                    value="{{ old('title') ? old('title') : (!empty($page) ? $page->title : '') }}">
             @if ($errors->has('title'))
@@ -14,7 +14,7 @@
         </label>
     </div>
     <div class="form-row">
-        <label>{{ trans('cms::page.urlpath') }}
+        <label>{{ trans('cms::cms.page.urlpath') }}
             <input type="text" name="slug" required autofocus placeholder=""
                    value="{{ old('slug') ? old('slug') : (!empty($page) ? $page->slug : '') }}" >
             @if ($errors->has('slug'))
@@ -37,7 +37,7 @@
             </label>
 
         @empty
-            <p>Keine Blocktypen vorhanden</p>
+            <p>{{trans('cms::cms.blocktypes.no_blocktypes')}}</p>
         @endforelse
     </div>
     {{ $additionalBottomFields }}
