@@ -7,7 +7,7 @@
         <div class="form-row">
             <label>{{ trans('cms::cms.blocktype.title') }}
                 <input type="text" name="title" required autofocus placeholder=""
-                       value="{{ old('title') ? old('title') : !empty($blocktype) ? $blocktype->title : '' }}">
+                       value="{{ old('title') ? old('title') : (!empty($blocktype) ? $blocktype->title : '') }}">
                 @if ($errors->has('title'))
                     <span class="form-error is-visible">{{ $errors->first('title') }}</span>
                 @endif
