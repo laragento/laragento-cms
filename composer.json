@@ -1,28 +1,28 @@
 {
-    "name": "laragento/laragento-cms",
-    "description": "A cms module for laragento",
-    "authors": [
-        {
-            "name": "vonbyte",
-            "email": "info@tazign.ch"
-        }
-    ],
-    "require": {
-        "laragento/laragento": "dev-dev"
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Laragento\\Cms\\Providers\\CmsServiceProvider"
-            ],
-            "aliases": {
-                
-            }
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "\\Laragento\\Cms\\": "./"
-        }
+  "name":        "laragento/laragento-cms",
+  "description": "A cms module for laragento",
+  "authors":     [
+    {
+      "name":  "vonbyte",
+      "email": "info@tazign.ch"
     }
+  ],
+  "require":     {
+    "laragento/laragento": "dev-dev"
+  },
+  "autoload":    {
+    "psr-4": {
+      "Laragento\\Cms\\": "./"
+    }
+  },
+  "extra":       {
+    "laravel": {
+      "providers": [
+        "Laragento\\Cms\\Providers\\CmsServiceProvider"
+      ],
+      "aliases":   {
+
+      }
+    }
+  }
 }
