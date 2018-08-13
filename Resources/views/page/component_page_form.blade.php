@@ -37,7 +37,7 @@
             </label>
 
         @empty
-            <p>{{trans('cms::cms.blocktypes.no_blocktypes')}}</p>
+            <p>{{trans('cms::cms.blocktype.no_blocktypes')}}</p>
         @endforelse
     </div>
     {{ $additionalBottomFields }}
