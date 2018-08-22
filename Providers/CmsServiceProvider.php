@@ -4,6 +4,7 @@ namespace Laragento\Cms\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Illuminate\Support\Facades\View;
 use Laragento\Cms\Repositories\BlockRepository;
 use Laragento\Cms\Repositories\BlockRepositoryInterface;
 use Laragento\Cms\Repositories\BlockTypeRepository;
@@ -33,7 +34,12 @@ class CmsServiceProvider extends ServiceProvider
         $this->publishAssets();
         $this->registerFactories();
         $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
-        $this->loadRoutesFrom(__DIR__ . '/../Http/routes.php');    }
+        $this->loadRoutesFrom(__DIR__ . '/../Http/routes.php');
+        $pageRepo = $this->app->make('Laragento\Cms\Repositories\PageRepositoryInterface');
+        $pages = $pageRepo->all();
+        View::share( 'cms_pages',$pages );
+    }
+
 
     /**
      * Register the service provider.
