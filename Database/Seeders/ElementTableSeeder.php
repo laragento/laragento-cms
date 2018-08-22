@@ -26,14 +26,16 @@ class ElementTableSeeder extends Seeder
             'ImageElement' => ['path','width','height','name','alt_txt','allowed_types']
         ];
         foreach ($types as $key => $fields) {
+            print_r($key);
             $el = factory(ElementType::class)->create([
                 'title' => $key,
             ]);
+            $id = $el->id;
             foreach ($fields as $field) {
+
                 factory(ElementField::class)->create([
                     'title' => $field,
-                    'element_type_id' => $el->id,
-
+                    'element_type_id' => $id
                 ]);
             }
         }

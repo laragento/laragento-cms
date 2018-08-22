@@ -24,8 +24,14 @@ class FileHelper
         UploadedFile $file,
         $path
     ) {
+
         if (!Storage::exists($path)) {
-            Storage::makeDirectory($path);
+            try {
+                Storage::makeDirectory($path);
+            } catch (\Exception $exception) {
+                throw $exception;
+                dd($path);
+            }
         }
 
         try {
