@@ -113,9 +113,9 @@ class PageController extends Controller
         $groupedBlocks = $blocks->groupBy('blockType.title')->all();
 
         // For the future
-        if ($page->user_id != Auth::guard('admins')->user()->id) {
+        /*if ($page->user_id != Auth::guard('admins')->user()->id) {
             abort(403, 'You are not authorized to retrieve this entity.');
-        }
+        }*/
 
         if (request()->expectsJson()) {
             return response()->json($page, 200);
