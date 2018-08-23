@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Validator;
 use Laragento\Admin\Helpers\AuthHelper;
 use Laragento\Cms\Models\BlockType;
 use Laragento\Cms\Models\Page;
-use Laragento\Cms\Repositories\BlockRepository;
-use Laragento\Cms\Repositories\PageRepository;
+use Laragento\Cms\Repositories\BlockRepositoryInterface;
+use Laragento\Cms\Repositories\PageRepositoryInterface;
 
 class PageController extends Controller
 {
@@ -20,8 +20,8 @@ class PageController extends Controller
     protected $blockTypes;
 
     public function __construct(
-        PageRepository $pageRepository,
-        BlockRepository $blockRepository,
+        PageRepositoryInterface $pageRepository,
+        BlockRepositoryInterface $blockRepository,
         AuthHelper $authHelper
     ) {
         $this->pageRepository = $pageRepository;
