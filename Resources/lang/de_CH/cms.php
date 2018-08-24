@@ -16,6 +16,7 @@ return [
 		"elementtitle" => "Element-Bezeichnung",
 		"new" => "Blocktyp erstellen",
 		"edit" => "Blocktyp bearbeiten",
+        "select_blocktype" => "Typ wählen..."
 	],
 	"page" => [
 	    "pages" => 'Seiten',
@@ -25,10 +26,15 @@ return [
 		"urlpath" => "Seitenpfad",
 		"new" => "Seite erstellen",
 		"edit" => "Seite bearbeiten",
-		"is_active" => "Seite ist aktiv"
+        "page_data" => "Metadaten",
+        "allowed_types" => "Mögliche Blocktypen",
+		"is_active" => "Seite ist aktiv",
+        "select_block" => "Block wählen..."
 	],
     "element" => [
-        "no_elements" => "Es sind noch keine Elemente vorhanden."
-    ]
+        "no_elements" => "Es sind noch keine Elemente vorhanden.",
+        "elements" => "Elemente",
+        "element" => "Element"
+    ],
 
 ];

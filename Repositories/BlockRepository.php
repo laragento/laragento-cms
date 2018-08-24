@@ -69,7 +69,7 @@ class BlockRepository extends AbstractContentRepository implements BlockReposito
                     $value = ElementFieldValue::where([
                         'block_id' => $id,
                         'element_id' => $element,
-                        'element_field_id' => $key]);
+                        'element_field_id' => $key])->first();
                     if ($value) {
                         $value->update(['value' => $field]);
                     } else {
