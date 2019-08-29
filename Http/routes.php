@@ -31,15 +31,15 @@ Route::group(['middleware' => 'web', 'prefix' => 'admin', 'namespace' => 'Larage
                 });
             });
             Route::prefix('blocktype')->group(function () {
-                Route::get('/', 'BlockTypecontroller@index')->name('cms.blocktype');
-                Route::get('/new', 'BlockTypecontroller@create')->name('cms.blocktype.new');
-                Route::post('/new', 'BlockTypecontroller@store')->name('cms.blocktype.store');
-                Route::get('/{blockType}', 'BlockTypecontroller@edit')->name('cms.blocktype.edit');
-                Route::post('/{blockType}/element', 'BlockTypecontroller@addElement')->name('cms.blocktype.element.add');
-                Route::patch('/element/{element}', 'BlockTypecontroller@updateElement')->name('cms.blocktype.element.update');
-                Route::delete('/element/{element}', 'BlockTypecontroller@removeElement')->name('cms.blocktype.element.remove');
-                Route::patch('/{blockType}', 'BlockTypecontroller@update')->name('cms.blocktype.update');
-                Route::delete('/{blockType}', 'BlockTypecontroller@destroy')->name('cms.blocktype.destroy');
+                Route::get('/', 'BlockTypeController@index')->name('cms.blocktype');
+                Route::get('/new', 'BlockTypeController@create')->name('cms.blocktype.new');
+                Route::post('/new', 'BlockTypeController@store')->name('cms.blocktype.store');
+                Route::get('/{blockType}', 'BlockTypeController@edit')->name('cms.blocktype.edit');
+                Route::post('/{blockType}/element', 'BlockTypeController@addElement')->name('cms.blocktype.element.add');
+                Route::patch('/element/{element}', 'BlockTypeController@updateElement')->name('cms.blocktype.element.update');
+                Route::delete('/element/{element}', 'BlockTypeController@removeElement')->name('cms.blocktype.element.remove');
+                Route::patch('/{blockType}', 'BlockTypeController@update')->name('cms.blocktype.update');
+                Route::delete('/{blockType}', 'BlockTypeController@destroy')->name('cms.blocktype.destroy');
             });
         });
     });
